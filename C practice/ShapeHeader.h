@@ -63,9 +63,8 @@ int factorial(int n) {
 void sorting() {
     int arra1[] = {3,5,9,20,2,1};
     int arra2[6];
-    int len = 6;
-    for(int i=5,j=0; i>=0; i--,j++){
-        arra2[j] = arra1[i];
+    for(int i=0; i<6; i++){
+        arra2[i] = arra1[i];
     }
     for(int i=0; i<6; i++){
         for(int j=0; j<6; j++){
