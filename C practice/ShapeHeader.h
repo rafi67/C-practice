@@ -59,3 +59,24 @@ int factorial(int n) {
     if(n==1) return 1;
     else return n*factorial(n-1);
 }
+
+void sorting() {
+    int arra1[] = {3,5,9,20,2,1};
+    int arra2[6];
+    int len = 6;
+    for(int i=0; i<6; i++){
+        for(int j=0; j<len; j++){
+            if(arra1[j]<arra1[i]){
+                arra2[i] = arra1[j];
+                len--;
+            }
+        }
+    }
+    for(int i=0; i<6; i++){
+        printf("%d ",arra1[i]);
+    }
+    printf("\n");
+    for(int j=0; j<6; j++){
+        printf("%d\n",arra2[j]);
+    }
+}
