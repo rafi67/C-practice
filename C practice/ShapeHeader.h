@@ -74,9 +74,6 @@ void sorting() {
                 arra2[j] = n2;
                 arra2[j+1] = n1;
             }
-            if(j>5){
-                j--;
-            }
         }
     }
     for(int i=0; i<6; i++){
@@ -87,4 +84,37 @@ void sorting() {
         printf("%d ",arra2[j]);
     }
     printf("\n");
+}
+
+void sorting2() {
+    int arra[2][6] = {{2,4,9,89,200,56},{0,0,0,0,0,0}};
+    for(int i=0,h=1; i<1; i++){
+        for(int j=0; j<6; j++){
+            arra[h][j] = arra[i][j];
+        }
+    }
+    for(int i=1; i<2; i++){
+        for(int j=0; j<6; j++){
+            for(int k=0; k<6; k++){
+                if(arra[i][k]>arra[i][k+1]){
+                    int n1 = arra[i][k];
+                    int n2 = arra[i][k+1];
+                    arra[i][k+1] = n1;
+                    arra[i][k] = n2;
+                }
+            }
+        }
+    }
+    for(int h=0; h<1; h++){
+        for(int i=0; i<6; i++){
+            printf("%d ",arra[h][i]);
+        }
+        printf("\n");
+    }
+    for(int i=1; i<2; i++){
+        for(int j=0; j<6; j++){
+            printf("%d ",arra[i][j]);
+        }
+        printf("\n");
+    }
 }

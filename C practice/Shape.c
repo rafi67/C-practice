@@ -1,5 +1,5 @@
 #include "ShapeHeader.h"
 
 void main() {
-    sorting();
+    sorting2();
 }
