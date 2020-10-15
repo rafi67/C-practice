@@ -64,11 +64,19 @@ void sorting() {
     int arra1[] = {3,5,9,20,2,1};
     int arra2[6];
     int len = 6;
+    for(int i=5,j=0; i>=0; i--,j++){
+        arra2[j] = arra1[i];
+    }
     for(int i=0; i<6; i++){
-        for(int j=0; j<len; j++){
-            if(arra1[j]<arra1[i]){
-                arra2[i] = arra1[j];
-                len--;
+        for(int j=0; j<6; j++){
+            if(arra2[j]>arra2[j+1]){
+                int n1 = arra2[j];
+                int n2 = arra2[j+1];
+                arra2[j] = n2;
+                arra2[j+1] = n1;
+            }
+            if(j>5){
+                j--;
             }
         }
     }
@@ -77,6 +85,7 @@ void sorting() {
     }
     printf("\n");
     for(int j=0; j<6; j++){
-        printf("%d\n",arra2[j]);
+        printf("%d ",arra2[j]);
     }
+    printf("\n");
 }
