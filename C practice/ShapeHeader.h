@@ -25,15 +25,32 @@ void shape1() {
 
 void shape2() {
     int n = 11;
-    for(int i=0; i<11; i++){
-        printf("\t");
-        printf(" ");
-        for(int j=0; j<n; j++){
-            printf("C");
+    int n2 = 1;
+    int n3 = 3;
+    int n4 = 5;
+    for(int i=0; i<6; i++){
+        for(int k=0; k<n2; k++){
+            printf(" ");
         }
-        printf("\t");
-        n = n-2;
+        n2++;
+        for(int j=0; j<n; j++){
+            printf("c");
+        }
+        n-=2;
         printf("\n");
+        if(i==5){
+            for(int j=0; j<5; j++){
+                for(int r=0; r<n4; r++){
+                    printf(" ");
+                }
+                n4--;
+                for(int k=0; k<n3; k++){
+                    printf("c");
+                }
+                n3+=2;
+                printf("\n");
+            }
+        }
     }
 }
 
