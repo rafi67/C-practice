@@ -86,7 +86,24 @@ void shape3() {
 }
 
 void shape4() {
-
+    int n = 1;
+    int n2 = 18;
+    int n3 = 1;
+    for(int i=0; i<10; i++){
+        for(int j=0; j<n; j++){
+            printf("c");
+        }
+        n++;
+        for(int r=0; r<n2; r++){
+            printf(" ");
+        }
+        n2-=2;
+        for(int j=0; j<n3; j++){
+            printf("c");
+        }
+        n3++;
+        printf("\n");
+    }
 }
 
 void palindrome() {
