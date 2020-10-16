@@ -118,3 +118,52 @@ void sorting2() {
         printf("\n");
     }
 }
+
+void robot() {
+    char c;
+    int x=0,y=0, x1,y1;
+    int position[9][9];
+    for(int i=0; i<9; i++){
+        for(int j=0; j<9; j++){
+            position[i][j] = 1;
+        }
+    }
+    int n1;
+    printf("Please enter the number of blocked cells:");
+    scanf("%d",&n1);
+    for(int i=0; i<n1; i++){
+        scanf("%d %d", &x1,&y1);
+        position[x1][y1] =0;
+    }
+    while(1){
+        scanf("%c",&c);
+        if(c=='S'){
+            break;
+        }
+        else if(c=='U'){
+            x--;
+            if(position[x][y]==0){
+                x++;
+            }
+        }
+        else if(c=='D'){
+            x++;
+            if(position[x][y]==0){
+                x--;
+            }
+        }
+        else if(c=='R'){
+            y++;
+            if(position[x][y]==0){
+                y--;
+            }
+        }
+        else if(c=='L'){
+            y--;
+            if(position[x][y]==0){
+                y++;
+            }
+        }
+    }
+    printf("The position of the robot is: %d, %d",x,y);
+}

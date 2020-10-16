@@ -1,5 +1,5 @@
 #include "ShapeHeader.h"
 
 void main() {
-    sorting2();
+    robot();
 }
