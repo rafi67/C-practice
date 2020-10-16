@@ -54,6 +54,41 @@ void shape2() {
     }
 }
 
+void shape3() {
+    int n= 7;
+    int n2= 1;
+    int n3 = 2;
+    int n4 = 6;
+    for(int i=0; i<7; i++){
+        for(int k=0; k<n2; k++){
+            printf(" ");
+        }
+        n2++;
+        for(int j=0; j<n; j++){
+            printf("c");
+        }
+        n--;
+        printf("\n");
+        if(i==6){
+            for(int r=0; r<6; r++){
+                for(int z=0; z<n4; z++){
+                    printf(" ");
+                }
+                n4--;
+                for(int h=0; h<n3; h++){
+                    printf("c");
+                }
+                n3++;
+                printf("\n");
+            }
+        }
+    }
+}
+
+void shape4() {
+
+}
+
 void palindrome() {
     char word[80], reverse_order[80];
     printf("Enter a palindrome word:");
