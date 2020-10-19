@@ -14,3 +14,15 @@ void program_2() {
     capital_letter = small_letter - 32;
     printf("Capital letter is %c",capital_letter);
 }
+
+void program_3() {
+    char Character;
+    printf("Please enter a character: ");
+    Character = getchar();
+    if(Character>=48 && Character<=57){
+        printf("1");
+    }
+    else{
+        printf("0");
+    }
+}
