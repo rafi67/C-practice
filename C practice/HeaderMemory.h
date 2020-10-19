@@ -6,3 +6,11 @@ void program_1() {
         printf("ADCII code for %c is %d\n",i,i);
     }
 }
+
+void program_2() {
+    char small_letter, capital_letter;
+    printf("Please enter a small letter: ");
+    small_letter = getchar();
+    capital_letter = small_letter - 32;
+    printf("Capital letter is %c",capital_letter);
+}
