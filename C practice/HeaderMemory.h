@@ -39,3 +39,15 @@ void program_4() {
     printf("Value of n2 = %d,\t",n2);
     printf("Address of n2 = %p\n",n2);
 }
+
+void program_5() {
+    int arra[5] = {50,60,70,80,90};
+    printf("Value of Array: %d, %d, %d, %d, %d\n",arra[0],
+           arra[1],arra[2],arra[3],arra[4]);
+    printf("Address of arra is %p\n", arra);
+    printf("Address of arra[0] is %p\n", &arra[0]);
+    printf("Address of arra[1] is %p\n", &arra[1]);
+    printf("Address of arra[2] is %p\n", &arra[2]);
+    printf("Address of arra[3] is %p\n", &arra[3]);
+    printf("Address of arra[4] is %p\n", &arra[4]);
+}
