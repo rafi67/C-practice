@@ -76,3 +76,11 @@ void program_7() {
     printf("Value of *p: %d\n", *p);
     printf("Value of *q: %d\n", *q);
 }
+
+void program_8() {
+    int x = 100;
+    int *p = NULL;
+    printf("Value of x: %d\n", x);
+    p = &x;
+    printf("Value of *p: %d\n", *p);
+}
