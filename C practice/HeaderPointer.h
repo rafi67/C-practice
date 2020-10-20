@@ -84,3 +84,9 @@ void program_8() {
     p = &x;
     printf("Value of *p: %d\n", *p);
 }
+
+void program_9() {
+    char s[] = "Bangladesh";
+    printf("Name of our country %s\n", s);
+    printf("Address of s is %p\n", s);
+}
