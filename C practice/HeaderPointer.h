@@ -21,3 +21,14 @@ void program_3() {
     printf("Value of pi is %lf\n", *ptr);
     printf("Value of ptr is %p\n", ptr);
 }
+
+void program_4() {
+    int x = 10;
+    int *p;
+    p = &x;
+    printf("Value of x is %d\n", x);
+    *p = 20;
+    printf("Value of x is %d\n", x);
+    printf("Address of x is %p\n", &x);
+    printf("Value of p is %p\n", p);
+}
