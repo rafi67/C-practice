@@ -13,3 +13,11 @@ void program_2() {
     printf("*p = %d\n", *p);
     printf("Value of p is %p\n", p);
 }
+
+void program_3() {
+    double pi = 3.14159265358;
+    int *ptr;
+    ptr = &pi;
+    printf("Value of pi is %lf\n", *ptr);
+    printf("Value of ptr is %p\n", ptr);
+}
