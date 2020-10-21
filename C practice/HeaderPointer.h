@@ -116,3 +116,14 @@ void program_12() {
     printf("Value of a %c\n", *p);
     printf("Value of a %c\n", **q);
 }
+
+void program_13() {
+    char c = 'A';
+    char *p, **q;
+    p = &c;
+    q = &p;
+    **q = 'B';
+    printf("Value of c: %c\n", c);
+    printf("Value of c: %c\n", *p);
+    printf("Value of c: %c\n", **q);
+}
