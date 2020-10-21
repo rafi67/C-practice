@@ -90,3 +90,10 @@ void program_9() {
     printf("Name of our country %s\n", s);
     printf("Address of s is %p\n", s);
 }
+
+void program_10() {
+    char s[] = "Bangladesh";
+    char *p;
+    p = s;
+    printf("Name of our country %s\n", p);
+}
