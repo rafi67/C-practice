@@ -106,3 +106,13 @@ void program_11() {
     p3 = &c3;
     printf("%c, %c, %c\n", *p1, *p2, *p3);
 }
+
+void program_12() {
+    char a = 'A';
+    char *p, **q;
+    p = &a;
+    q = &p;
+    printf("Value of a %c\n", a);
+    printf("Value of a %c\n", *p);
+    printf("Value of a %c\n", **q);
+}
