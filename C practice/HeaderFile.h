@@ -30,3 +30,14 @@ void program_3() {
     fprintf(fp, "Second line.\n");
     fclose(fp);
 }
+
+void program_4() {
+    FILE *fp;
+    char filename[] = "my_file3.txt";
+    fp = fopen(filename, "r");
+    char data[100];
+    fscanf(fp, "%s", data);
+    fscanf(fp, "%s", data);
+    printf("%s", data);
+    fclose(fp);
+}

@@ -1,5 +1,5 @@
 #include "HeaderFile.h"
 
 void main() {
-    program_3();
+    program_4();
 }
