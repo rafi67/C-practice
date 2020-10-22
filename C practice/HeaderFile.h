@@ -18,3 +18,15 @@ void program_2() {
     fclose(fp);
     fprintf(fp, "Second line.\n");
 }
+
+void program_3() {
+    FILE *fp;
+    char filename[] = "my_file3.txt";
+    fp = fopen(filename, "w");
+    fprintf(fp, "This file is written by my program! ");
+    fprintf(fp, "I'm so happy.\n");
+    fclose(fp);
+    fp = fopen(filename, "a");
+    fprintf(fp, "Second line.\n");
+    fclose(fp);
+}
