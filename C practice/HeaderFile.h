@@ -36,10 +36,12 @@ void program_4() {
     char filename[] = "my_file3.txt";
     fp = fopen(filename, "r");
     char data[100];
-    fscanf(fp, "%s", data);
-    fscanf(fp, "%s", data);
-    printf("%s", data);
+    char data2[100];
+    fgets(data, 100, fp);
+    fgets(data2, 100, fp);
     fclose(fp);
+    printf("%s\n", data);
+    printf("%s\n", data2);
 }
 
 void program_5() {
