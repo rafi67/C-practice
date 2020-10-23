@@ -83,3 +83,58 @@ void program_6() {
     fprintf(out_file, "%d\n", sum);
     fclose(out_file);
 }
+
+
+void program_7() {
+    int roll,roll2,roll3,num1,num2,num3,sum;
+    int math[2][10] = {{1,2,3,4,5,6,7,8,9,10},{70,50,90,80,100,99,88,77,98,56}};
+    int english[2][10] = {{1,2,3,4,5,6,7,8,9,10},{70,50,90,80,100,99,88,77,98,56}};
+    int bangla[2][10] = {{1,2,3,4,5,6,7,8,9,10},{70,50,90,80,100,99,88,77,98,56}};
+    FILE *fp, *fp2, *fp3, *fp4;
+    char filename1[] = "math.txt";
+    char filename2[] = "english.txt";
+    char filename3[] = "bangla.txt";
+    char filename4[] = "result.txt";
+    fp = fopen(filename1, "w");
+    for(int i=0, k=1; i<1; i++){
+        for(int j=0; j<10; j++){
+            fprintf(fp, "%d %d\n",math[i][j],math[k][j]);
+        }
+    }
+    fclose(fp);
+    fp = fopen(filename2, "w");
+    for(int i=0, k=1; i<1; i++){
+        for(int j=0; j<10; j++){
+            fprintf(fp, "%d %d\n", english[i][j], english[k][j]);
+        }
+    }
+    fclose(fp);
+    fp = fopen(filename3, "w");
+    for(int i=0, k=1; i<1; i++){
+        for(int j=0; j<10; j++){
+            fprintf(fp, "%d %d\n", bangla[i][j], bangla[k][j]);
+        }
+    }
+    fclose(fp);
+    fp = fopen(filename1, "r");
+    fp2 = fopen(filename2, "r");
+    fp3 = fopen(filename3, "r");
+    fp4 = fopen(filename4, "w");
+    for(int i=0; i<10; i++){
+        int data1[20];
+        int data2[20];
+        int data3[20];
+        fgets(data1,20,fp);
+        fgets(data2,20,fp2);
+        fgets(data3,20,fp3);
+        sscanf(data1,"%d %d",&roll,&num1);
+        sscanf(data2,"%d %d",&roll2,&num2);
+        sscanf(data3,"%d %d",&roll3,&num3);
+        sum = num1+num2+num3;
+        fprintf(fp4, "%d-%d\n", roll,sum);
+    }
+    fclose(fp);
+    fclose(fp2);
+    fclose(fp3);
+    fclose(fp4);
+}
