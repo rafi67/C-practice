@@ -62,3 +62,24 @@ void program_5() {
     fprintf(out_fp, "%d", sum);
     fclose(out_fp);
 }
+
+void program_6() {
+    char data[80];
+    int num1, num2, sum;
+    FILE *in_file, *out_file;
+    char filename[] = "in_file2.txt";
+    char filename2[] = "out_file2.txt";
+    in_file = fopen(filename, "w");
+    fprintf(in_file, "24 ");
+    fprintf(in_file, "24 ");
+    fclose(in_file);
+    in_file = fopen(filename, "r");
+    fgets(data, 80, in_file);
+    fclose(in_file);
+    sscanf(data, "%d %d", &num1, &num2);
+    sum = num1+num2;
+    printf("%d + %d = %d\n", num1, num2, sum);
+    out_file = fopen(filename2, "w");
+    fprintf(out_file, "%d\n", sum);
+    fclose(out_file);
+}
