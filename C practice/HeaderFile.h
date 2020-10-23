@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void program_1() {
     FILE *fp;
@@ -137,4 +138,27 @@ void program_7() {
     fclose(fp2);
     fclose(fp3);
     fclose(fp4);
+}
+
+void program_8() {
+    FILE *fp_in, *fp_out;
+    char *input_file = "netbeans.png";
+    char *output_file = "C:\\Users\\rafis\\Desktop\\netbeans2.png";
+    int ch;
+    fp_in = fopen(input_file, "rb");
+    if(fp_in == NULL){
+        perror("File opening failed");
+        return EXIT_FAILURE;
+    }
+    fp_out = fopen(output_file, "wb");
+    while(1){
+        ch = fgetc(fp_in);
+        if(ch == EOF){
+            break;
+        }
+        fputc(ch, fp_out);
+    }
+
+    fclose(fp_in);
+    fclose(fp_out);
 }
