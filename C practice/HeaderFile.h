@@ -162,3 +162,25 @@ void program_8() {
     fclose(fp_in);
     fclose(fp_out);
 }
+
+void program_9() {
+    int ch;
+    FILE *fp_in, *fp_out;
+    char filename1[] = "F:\\VIDEO SONGS\\YouTube - -Pee Loon-OUATIM Song 2010 _HD_ W_Eng Subs--.mp4";
+    char filename2[] = "C:\\Users\\rafis\\Desktop\\song.mp4";
+    fp_in = fopen(filename1, "rb");
+    if(fp_in == NULL){
+        perror("File opening failed");
+        return EXIT_FAILURE;
+    }
+    fp_out = fopen(filename2, "wb");
+    while(1){
+        ch = fgetc(fp_in);
+        if(ch == EOF){
+            break;
+        }
+        fputc(ch, fp_out);
+    }
+    fclose(fp_in);
+    fclose(fp_out);
+}
