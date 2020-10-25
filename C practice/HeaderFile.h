@@ -148,7 +148,7 @@ void program_8() {
     fp_in = fopen(input_file, "rb");
     if(fp_in == NULL){
         perror("File opening failed");
-        return EXIT_FAILURE;
+        //return EXIT_FAILURE;
     }
     fp_out = fopen(output_file, "wb");
     while(1){
@@ -183,4 +183,21 @@ void program_9() {
     }
     fclose(fp_in);
     fclose(fp_out);
+}
+
+void program_10() {
+    FILE *fp = fopen("in.txt", "r");
+    if(fp == NULL){
+        perror("Can't open file");
+        //return EXIT_FAILURE;
+    }
+    int ch;
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    fseek(fp,0,0);
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    fclose(fp);
 }
