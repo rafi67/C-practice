@@ -231,4 +231,18 @@ void program_12() {
     fseek(fp, sizeof(char)*3, SEEK_CUR);
     ch = fgetc(fp);
     printf("%c\n", (char)ch);
+    fclose(fp);
+}
+
+void program_13() {
+    FILE *fp_in;
+    char *input_file = "netbeans.png";
+    fp_in = fopen(input_file, "rb");
+    if(fp_in == NULL){
+        perror("File opening failed");
+    }
+    fseek(fp_in, 0, SEEK_END);
+    printf("File Size: %ld bytes\n", ftell(fp_in));
+    printf("File Size (KiloByte): %ld\n", ftell(fp_in)/1024);
+    fclose(fp_in);
 }
