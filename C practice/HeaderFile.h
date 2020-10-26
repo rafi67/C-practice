@@ -217,3 +217,18 @@ void program_11() {
     fseek(fp, 0, SEEK_CUR);
     printf("%c\n", (char)ch);
 }
+
+void program_12() {
+    int ch;
+    FILE *fp = fopen("in.txt", "r");
+    if(fp == NULL){
+        perror("File opening failed");
+    }
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    fseek(fp, sizeof(char)*3, SEEK_CUR);
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+}
