@@ -201,3 +201,19 @@ void program_10() {
     printf("%c\n", (char)ch);
     fclose(fp);
 }
+
+void program_11() {
+    FILE *fp = fopen("in.txt", "r");
+    if(fp == NULL){
+        perror("File opening failed");
+    }
+    int ch = fgetc(fp);
+    printf("%c\n",(char) ch);
+    ch = fgetc(fp);
+    printf("%c\n", (char) ch);
+    fseek(fp, 0, SEEK_SET);
+    ch = fgetc(fp);
+    printf("%c\n", (char)ch);
+    fseek(fp, 0, SEEK_CUR);
+    printf("%c\n", (char)ch);
+}
