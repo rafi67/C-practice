@@ -6,3 +6,18 @@ void program_1() {
     int y;
     printf("x = %d, y = %d\n", x, y);
 }
+
+int x1 = 1;
+
+void myfnc(int y) {
+    y = y*2;
+    x1 = x1+10;
+    printf("myfnc, x = %d, y = %d\n", x1, y);
+}
+
+void program_2() {
+    int y = 5;
+    x1 = 10;
+    myfnc(y);
+    printf("main, x = %d, y = %d\n", x1, y);
+}
