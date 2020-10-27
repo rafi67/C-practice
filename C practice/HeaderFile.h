@@ -246,3 +246,15 @@ void program_13() {
     printf("File Size (KiloByte): %ld\n", ftell(fp_in)/1024);
     fclose(fp_in);
 }
+
+void program_14() {
+    int return_value;
+    char *filename = "bangla.txt";
+    return_value = remove(filename);
+    if(return_value != 0){
+        perror("File Remove Failed");
+    }
+    else if(return_value == 0){
+        printf("%s removed successfully\n", filename);
+    }
+}
