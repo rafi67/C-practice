@@ -49,3 +49,9 @@ void program_4() {
     func2();
     func2();
 }
+
+void program_5() {
+    char *s = "Hurray, I am learning recursion!";
+    printf("%s\n", s);
+    program_5();
+}
