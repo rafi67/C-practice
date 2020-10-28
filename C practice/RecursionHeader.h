@@ -21,3 +21,17 @@ void program_2() {
     myfnc(y);
     printf("main, x = %d, y = %d\n", x1, y);
 }
+
+int a;
+static int b;
+
+void func() {
+    a = a+1;
+    b = b+1;
+}
+
+void program_3() {
+    func();
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+}
