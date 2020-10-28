@@ -81,3 +81,13 @@ void program_8(int Count) {
     program_8(Count+1);
     printf("Count = %d\n", Count);
 }
+
+void program_9() {
+    static int Count = 1;
+    if(Count>5){
+        return;
+    }
+    printf("Count = %d\n", Count);
+    Count++;
+    program_9();
+}
