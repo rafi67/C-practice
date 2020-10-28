@@ -64,3 +64,11 @@ void program_6(int Count) {
     program_6(Count+1);
     return;
 }
+
+void program_7(int Count) {
+    if(Count>5){
+        return;
+    }
+    printf("Count = %d\n", Count);
+    program_7(Count+1);
+}
