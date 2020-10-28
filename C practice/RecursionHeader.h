@@ -35,3 +35,17 @@ void program_3() {
     printf("a = %d\n", a);
     printf("b = %d\n", b);
 }
+
+void func2() {
+    int a1 = 10;
+    static int s = 10;
+    a1 = a1+2;
+    s = s+2;
+    printf("a = %d, s = %d\n", a1, s);
+}
+
+void program_4() {
+    func2();
+    func2();
+    func2();
+}
