@@ -1,5 +1,5 @@
 #include "RecursionHeader.h"
 
 void main() {
-    program_5();
+    program_6(1);
 }

@@ -55,3 +55,12 @@ void program_5() {
     printf("%s\n", s);
     program_5();
 }
+
+void program_6(int Count) {
+    if(Count == 5){
+        return;
+    }
+    printf("I am learning recursion.\n");
+    program_6(Count+1);
+    return;
+}
