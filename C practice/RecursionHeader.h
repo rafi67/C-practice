@@ -91,3 +91,20 @@ void program_9() {
     Count++;
     program_9();
 }
+
+int factorial(int n) {
+    if(n==0){
+        return 1;
+    }
+    return n*factorial(n-1);
+}
+
+void program_10() {
+    int n;
+    scanf("%d", &n);
+    if(n<0){
+        printf("Undefined\n");
+        return;
+    }
+    printf("Factorial of %d is %d\n", n, factorial(n));
+}
