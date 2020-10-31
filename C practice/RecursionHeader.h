@@ -108,3 +108,24 @@ void program_10() {
     }
     printf("Factorial of %d is %d\n", n, factorial(n));
 }
+
+int f_calls = 0;
+
+int factorial2(int n) {
+    f_calls++;
+    if(n == 0){
+        return 1;
+    }
+    return n*factorial2(n-1);
+}
+
+void program_11() {
+    int n;
+    scanf("%d", &n);
+    if(n<0){
+        printf("Undefined\n");
+        return 0;
+    }
+    printf("Factorial of %d is %d\n", n, factorial2(n));
+    printf("Number of factorial calls : %d\n", f_calls);
+}
