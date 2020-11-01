@@ -158,5 +158,45 @@ void program_12() {
         strcpy(s, "th");
     }
     printf("%d%s fibonacci number is %d\n", n, s, fib(n));
-    printf("Number of function calls : %d\n", f_calls);
+    printf("Number of function calls : %d\n", f_calls2);
+}
+
+int f_calls3 = 0;
+int fibo[50];
+
+int fib2(int n){
+    f_calls3++;
+    if(fibo[n]!=0){
+        return fibo[n];
+    }
+    if(n == 1 || n == 2){
+        return fibo[n];
+    }
+    fibo[n] = fib2(n-1) + fib2(n-2);
+    return fibo[n];
+}
+
+void program_13() {
+    int n;
+    char s[3];
+    fibo[1] = 1;
+    fibo[2] = 1;
+    scanf("%d", &n);
+    if(n == 1){
+        strcpy(s, "st");
+    }
+    else if(n == 2){
+        strcpy(s, "nd");
+    }
+    else if(n == 3){
+        strcpy(s, "rd");
+    }
+    else{
+        strcpy(s, "th");
+    }
+    printf("%d%s fibonacci number is %d\n", n, s, fib2(n));
+    printf("Number of function calls : %d\n", f_calls3);
+    for(int i=1; i<12; i++){
+        printf("%d : %d\n", n, fibo[i]);
+    }
 }
