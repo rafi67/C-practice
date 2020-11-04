@@ -125,7 +125,7 @@ void program_11() {
     scanf("%d", &n);
     if(n<0){
         printf("Undefined\n");
-        return 0;
+        return;
     }
     printf("Factorial of %d is %d\n", n, factorial2(n));
     printf("Number of factorial calls : %d\n", f_calls);
@@ -199,4 +199,66 @@ void program_13() {
     for(int i=1; i<12; i++){
         printf("%d : %d\n", n, fibo[i]);
     }
+}
+
+int n = 1;
+int n2 = 1;
+int n3 = 0;
+void series() {
+    if(n2 == 11){
+        printf("Total sum is %d\n", n3);
+        return;
+    }
+    n3 = n3+n;
+    n++;
+    n2++;
+    program_14();
+}
+
+void program_14() {
+    series();
+}
+
+char c[] = "Bangladesh";
+char c2[11];
+int num1 = 0;
+int num2 = 9;
+
+void reverseString() {
+    if(num1 == 10){
+        printf("%s\n", c2);
+        return;
+    }
+    c2[num1] = c[num2];
+    num1++;
+    num2--;
+    reverseString();
+}
+
+int f;
+
+void permutation(int n, int r) {
+    int f2 = factorial(n)/factorial(n-r);
+    f = f2;
+}
+
+int arra[] = {2,3,5,6,7,8,4,1,9,10};
+
+void program_15() {
+    if(f == 0){
+        return;
+    }
+    for(int i = 0, n = 1; i<10, n<10; i++, n++){
+        int n1 = arra[i];
+        int n2 = arra[n];
+        arra[i] = n2;
+        arra[n] = n1;
+    }
+    for(int i = 0; i<10; i++){
+        printf("%d,", arra[i]);
+    }
+    printf("\n");
+    f--;
+    program_15();
+    printf("value of f is %d\n", f);
 }
