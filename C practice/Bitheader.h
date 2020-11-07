@@ -57,3 +57,14 @@ void program_6() {
     n3 = n1 ^ n2;
     printf("%d ^ %d = %d\n", n1, n2, n3);
 }
+
+void program_7() {
+    int n;
+    scanf("%d", &n);
+    if(n & 1){
+        printf("%d is odd\n", n);
+    }
+    else{
+        printf("%d is even\n", n);
+    }
+}
