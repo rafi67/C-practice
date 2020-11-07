@@ -68,3 +68,19 @@ void program_7() {
         printf("%d is even\n", n);
     }
 }
+
+char to_upper(char ch) {
+    return ch & 95;
+}
+
+char to_lower(char ch) {
+    return ch | 32;
+}
+
+void program_8() {
+    char *str = "AbCdEfGhIjKlMnOpQrStUvWxyz";
+    for(int i = 0; i < 26; i++){
+        printf("Uppercase : %c, ", to_upper(str[i]));
+        printf("Lowercase : %c\n", to_lower(str[i]));
+    }
+}
