@@ -1,5 +1,5 @@
 #include "Bitheader.h"
 
 void main() {
-    program_5();
+    program_6();
 }
