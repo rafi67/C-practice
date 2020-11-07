@@ -45,3 +45,9 @@ void program_4() {
     n3 = n1 | n2;
     printf("%d | %d = %d\n", n1, n2, n3);
 }
+
+void program_5() {
+    int n1 = 5, n2 = 6, n3;
+    n3 = n1 & n2;
+    printf("%d & %d = %d\n", n1, n2, n3);
+}
