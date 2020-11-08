@@ -95,3 +95,23 @@ void program_9() {
         printf("%d is not a power of 2\n", n);
     }
 }
+
+void program_10() {
+    int n;
+    int Count = 0;
+    int arra[100];
+    printf("How many time do you want to store number? ");
+    scanf("%d", &n);
+    printf("Please enter a number:\n");
+    for(int i=0; i<n; i++){
+        int number;
+        scanf("%d", &number);
+        arra[i] = number;
+    }
+    for(int i=0; i<n; i++){
+        if(arra[i] == 1){
+            Count++;
+        }
+    }
+    printf("%d is store in array for %d times", 1, Count);
+}
