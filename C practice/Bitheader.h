@@ -115,3 +115,14 @@ void program_10() {
     }
     printf("%d is store in array for %d times", 1, Count);
 }
+
+void program_11() {
+    int n, Count;
+    scanf("%d", &n);
+    Count = 0;
+    while(n){
+        if(n&1) Count++;
+        n = n >> 1;
+    }
+    printf("Number of 1: %d\n", Count);
+}
