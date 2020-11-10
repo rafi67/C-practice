@@ -148,3 +148,13 @@ void program_13() {
         puts("Numbers are equal\n");
     }
 }
+
+void program_14() {
+    int arra[] = {1,2,3,4,1,2,3};
+    int result, n = 7;
+    result = arra[0];
+    for(int i=1; i<n; i++){
+        result = result ^ arra[i];
+    }
+    printf("Result: %d\n", result);
+}
