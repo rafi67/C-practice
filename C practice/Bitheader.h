@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <limits.h>
 void program_1() {
     char a, b;
     a = 0;
@@ -123,6 +123,17 @@ void program_11() {
     while(n){
         if(n&1) Count++;
         n = n >> 1;
+    }
+    printf("Number of 1: %d\n", Count);
+}
+
+void program_12() {
+    int n1 = sizeof(int) * CHAR_BIT;
+    printf("Size of integer is %d\n", n1);
+    int n = 32, Count, i, num;
+    scanf("%d", &num);
+    for(i=0; i<n; i++){
+        if(num & (1 << i)) Count++;
     }
     printf("Number of 1: %d\n", Count);
 }
