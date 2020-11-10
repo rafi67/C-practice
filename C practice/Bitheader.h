@@ -137,3 +137,14 @@ void program_12() {
     }
     printf("Number of 1: %d\n", Count);
 }
+
+void program_13() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    if(n ^ m){
+        puts("Numbers are not equal\n");
+    }
+    else{
+        puts("Numbers are equal\n");
+    }
+}
