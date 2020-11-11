@@ -171,3 +171,16 @@ void program_15() {
         i--;
     }
 }
+
+void program_16() {
+    int arra[] = {1,2,3,4,5,6,7,8};
+    int n = 11;
+    int i = 7;
+    while(1){
+        if(i==5) break;
+        if(arra[i]^(n=n-1)){
+            printf("%d\n", n);
+        }
+        i--;
+    }
+}
