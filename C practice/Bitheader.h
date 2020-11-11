@@ -158,3 +158,16 @@ void program_14() {
     }
     printf("Result: %d\n", result);
 }
+
+void program_15() {
+    int arra[] = {1,2,3,4,5,6,7,8,9};
+    int n = 11;
+    int i = 8;
+    while(1){
+        if(arra[i]^(n=n-1)){
+            printf("%d\n", n);
+            break;
+        }
+        i--;
+    }
+}
