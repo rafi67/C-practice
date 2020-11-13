@@ -61,3 +61,30 @@ void program_4() {
     printf("ID: %d\n", one.id);
     printf("Name: %s %s\n", one.name.first, one.name.last);
 }
+
+struct nametype2 {
+    char first[20];
+    char last[20];
+};
+
+struct student3 {
+    int id;
+    struct nametype2 name;
+};
+
+void program_5() {
+    struct student3 one[5];
+    int i, n = 5;
+    for(i=0; i<n; i++){
+        printf("Enter your id: ");
+        scanf("%d", &one[i].id);
+        printf("Enter your first name: ");
+        scanf("%s", one[i].name.first);
+        printf("Enter your last name: ");
+        scanf("%s", one[i].name.last);
+    }
+    for(i=0; i<n; i++){
+        printf("ID: %d\n", one[i].id);
+        printf("Name: %s %s\n", one[i].name.first, one[i].name.last);
+    }
+}
