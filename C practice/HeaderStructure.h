@@ -142,3 +142,20 @@ void program_6() {
         printf("Grade: %s\n", Student[i].grade);
     }
 }
+
+void plus_ten1(int a) {
+    a = a + 10;
+}
+
+void plus_ten2(int* a) {
+    *a = (*a) + 10;
+}
+
+void program_7() {
+    int a;
+    a = 5;
+    plus_ten1(a);
+    printf("a = %d\n", a);
+    plus_ten2(&a);
+    printf("a = %d\n", a);
+}
