@@ -88,3 +88,57 @@ void program_5() {
         printf("Name: %s %s\n", one[i].name.first, one[i].name.last);
     }
 }
+
+typedef struct {
+    char first[20];
+    char last[20];
+} nametype3;
+
+typedef struct {
+    int id;
+    nametype3 name;
+    char grade[3];
+} student4;
+
+void calculate_grade(student4 s, int mark) {
+    if(mark>=80){
+        strcpy(s.grade, "A+");
+    }
+    else if(mark>=70){
+        strcpy(s.grade, "A");
+    }
+    else if(mark>=60){
+        strcpy(s.grade, "A-");
+    }
+    else if(mark>=50){
+        strcpy(s.grade, "B");
+    }
+    else if(mark>=40){
+        strcpy(s.grade, "C");
+    }
+    else{
+        strcpy(s.grade, "F");
+    }
+}
+
+void program_6() {
+    student4 Student[3];
+    int i, n=3;
+    int marks[] = {72, 82, 60};
+    for(i=0; i<n; i++){
+        printf("Enter your id: ");
+        scanf("%d", &Student[i].id);
+        printf("Enter your first name: ");
+        scanf("%s", Student[i].name.first);
+        printf("Enter your last name: ");
+        scanf("%s", Student[i].name.last);
+    }
+    for(i=0; i<n; i++){
+        calculate_grade(Student[i], marks[i]);
+    }
+    for(i=0; i<n; i++){
+        printf("ID: %d\n", Student[i].id);
+        printf("Name: %s %s\n", Student[i].name.first, Student[i].name.last);
+        printf("Grade: %s\n", Student[i].grade);
+    }
+}
