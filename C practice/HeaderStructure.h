@@ -214,3 +214,50 @@ void program_8() {
         printf("Grade: %s\n", Student[i].grade);
     }
 }
+
+typedef struct {
+    int day;
+    int month;
+    int year;
+} Date;
+
+typedef struct {
+    char first_Name[20];
+    char last_Name[20];
+    char father_first_Name[20];
+    char father_last_Name[20];
+    char mother_first_Name[20];
+    char mother_last_Name[20];
+} Name;
+
+typedef struct {
+    Name name;
+    Date date_of_birth;
+    int ID_NO;
+} NID;
+
+void program_9() {
+    NID info;
+    printf("Please enter your first name: ");
+    scanf("%s", info.name.first_Name);
+    printf("Enter your last name: ");
+    scanf("%s", info.name.last_Name);
+    printf("Enter your father first name: ");
+    scanf("%s", info.name.father_first_Name);
+    printf("Enter your father last name: ");
+    scanf("%s", info.name.father_last_Name);
+    printf("Enter your mother first name: ");
+    scanf("%s", info.name.mother_first_Name);
+    printf("Enter your mother last name: ");
+    scanf("%s", info.name.mother_last_Name);
+    printf("Enter your date of birth: ");
+    scanf("%d %d %d", &info.date_of_birth.day, &info.date_of_birth.month,
+          &info.date_of_birth.year);
+    info.ID_NO = 12343454;
+    printf("Name: %s %s\n", info.name.first_Name, info.name.last_Name);
+    printf("Father's Name: %s %s\n", info.name.father_first_Name, info.name.father_last_Name);
+    printf("Mother's Name: %s %s\n", info.name.mother_first_Name, info.name.mother_last_Name);
+    printf("Date of Birth: %d-%d-%d\n", info.date_of_birth.day, info.date_of_birth.month,
+           info.date_of_birth.year);
+    printf("NID NO: %d", info.ID_NO);
+}
