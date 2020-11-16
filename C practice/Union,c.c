@@ -1,5 +1,5 @@
 #include "HeaderUnion.h"
 
 void main() {
-    program_1();
+    program_2();
 }
