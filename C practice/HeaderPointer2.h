@@ -33,3 +33,20 @@ void program_2() {
     }
     free(marks);
 }
+
+void program_3() {
+    int *marks;
+    int i, n;
+    printf("Enter the number of student: ");
+    scanf("%d", &n);
+    marks = (int *)calloc(0,n-1);
+    printf("Enter marks for each student:\n");
+    for(i=0; i<n; i++){
+        scanf("%d", &marks[i]);
+    }
+    printf("Now you can see the values:\n");
+    for(i=0; i<n; i++){
+        printf("%d\n", marks[i]);
+    }
+    free(marks);
+}
