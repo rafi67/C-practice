@@ -77,3 +77,38 @@ void program_4() {
         }
     }
 }
+
+void program_5() {
+    int **arra;
+    int i, j, n, total_classes;
+    printf("Enter the number of classes: ");
+    scanf("%d", &total_classes);
+    int num[total_classes];
+    arra = (int **)malloc(sizeof(int)*total_classes);
+    if(arra==NULL){
+        printf("Memory allocation failed\n");
+        return;
+    }
+    for(i=0; i<total_classes; i++){
+        printf("Enter the number of student for class %d: ", i+1);
+        scanf("%d", &n);
+        num[i] = n;
+        arra[i] = (int *)malloc(sizeof(int)*n);
+        if(arra[i]==NULL){
+            printf("Memory allocation failed\n");
+            return;
+        }
+        for(j=0; j<n; j++){
+            printf("Enter marks for student %d: ", j+1);
+            scanf("%d", &arra[i][j]);
+        }
+    }
+    printf("Output:\n");
+    for(i=0; i<total_classes; i++){
+        printf("Class %d: ", i+1);
+        for(j=0; j<num[i]; j++){
+            printf("%4d", arra[i][j]);
+        }
+        printf("\n");
+    }
+}
