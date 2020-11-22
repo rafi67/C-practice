@@ -50,3 +50,30 @@ void program_3() {
     }
     free(marks);
 }
+
+void program_4() {
+    int i, j, n;
+    int *arra[5], num[5];
+    for(i=0; i<5; i++){
+        printf("Enter number of student for class %d: ",i+1);
+        scanf("%d", &n);
+        num[i] = n;
+        arra[i] = (int *)malloc(sizeof(int)*n);
+        if(arra[i]==NULL){
+            printf("Memory Allocation failed\n");
+            return;
+        }
+        for(j=0; j<num[i]; j++){
+            printf("Enter marks for student %d: ", j+1);
+            scanf("%d", &arra[i][j]);
+        }
+    }
+    printf("Output:\n");
+    for(i=0; i<5; i++){
+        printf("\n");
+        printf("Class %d: ", i+1);
+        for(j=0; j<num[i]; j++){
+            printf("%4d", arra[i][j]);
+        }
+    }
+}
