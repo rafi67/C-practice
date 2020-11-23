@@ -156,3 +156,20 @@ void program_8() {
     printf("Value of vp is %p\n", vp);
     printf("Content of vp is %d\n", *((int *)vp));
 }
+
+int add(int n1, int n2) {
+    return n1+n2;
+}
+
+int sub(int n1, int n2) {
+    return n1-n2;
+}
+
+void program_9() {
+    int (*fnc)(int, int);
+    int n1 = 10, n2 = 5;
+    fnc = &add;
+    printf("Result is %d\n", fnc(n1,n2));
+    fnc = &sub;
+    printf("Result is %d\n", fnc(n1,n2));
+}
