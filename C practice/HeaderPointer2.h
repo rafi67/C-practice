@@ -147,3 +147,12 @@ void program_7() {
     printf("r+1 = %p\n", r+1);
     printf("r+2 = %p\n", r+2);
 }
+
+void program_8() {
+    void *vp;
+    int n = 10;
+    vp = &n;
+    printf("Address of n is %p\n", &n);
+    printf("Value of vp is %p\n", vp);
+    printf("Content of vp is %d\n", *((int *)vp));
+}
