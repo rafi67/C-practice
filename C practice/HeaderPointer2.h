@@ -112,3 +112,17 @@ void program_5() {
         printf("\n");
     }
 }
+
+void program_6() {
+    int arra[] = {100,200,300,400,500,600,700};
+    int *p;
+    p = arra;
+    printf("*p = %d\n", *p);
+    printf("*p+1 = %d\n", *p+1);
+    printf("*(p+1) = %d\n", *(p+1));
+    printf("*(p+2) = %d\n", *(p+2));
+    printf("*(p+3) = %d\n", *(p+3));
+    printf("*(p+4) = %d\n", *(p+4));
+    printf("*(p+5) = %d\n", *(p+5));
+    printf("*(p+6) = %d\n", *(p+6));
+}
