@@ -173,3 +173,13 @@ void program_9() {
     fnc = &sub;
     printf("Result is %d\n", fnc(n1,n2));
 }
+
+int operate(int (*op)(int,int), int a, int b) {
+    return op(a, b);
+}
+
+void program_10() {
+    int a = 10, b = 5;
+    printf("Result is %d\n", operate(&add, a, b));
+    printf("Result is %d\n", operate(&sub, a, b));
+}
