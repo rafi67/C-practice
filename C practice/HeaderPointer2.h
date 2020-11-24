@@ -183,3 +183,16 @@ void program_10() {
     printf("Result is %d\n", operate(&add, a, b));
     printf("Result is %d\n", operate(&sub, a, b));
 }
+
+int comparefunc(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+void program_11() {
+    int i, n = 5;
+    int values[] = {65,6,100,1,250};
+    qsort(values,5,sizeof(int),comparefunc);
+    for(i=0; i<n; i++){
+        printf("%d\n", values[i]);
+    }
+}
