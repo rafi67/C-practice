@@ -196,3 +196,22 @@ void program_11() {
         printf("%d\n", values[i]);
     }
 }
+
+void program_12() {
+    int key, *item, n=5;
+    int values[] = {1,2,5,7,9};
+    while(1){
+        printf("Enter a key value(0 to exit): ");
+        scanf("%d", &key);
+        if(key==0){
+            break;
+        }
+        item = (int *) bsearch(&key,values,n,sizeof(int),comparefunc);
+        if(item!=NULL){
+            printf("Item found %d\n", *item);
+        }
+        else{
+            printf("Item not found\n");
+        }
+    }
+}
