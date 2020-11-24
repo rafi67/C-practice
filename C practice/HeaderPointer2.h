@@ -215,3 +215,23 @@ void program_12() {
         }
     }
 }
+
+void program_13() {
+    int key, *item, n = 5;
+    int values[] = {23,44,66,77,33};
+    qsort(values,n,sizeof(int),comparefunc);
+    while(1){
+        printf("Enter a key value(0 to exit): ");
+        scanf("%d", &key);
+        if(key==NULL){
+            break;
+        }
+        item = (int *) bsearch(&key, values, n, sizeof(int), comparefunc);
+        if(item!=NULL){
+            printf("Item found %d\n", *item);
+        }
+        else{
+            printf("Item not found\n");
+        }
+    }
+}
