@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 void fnc(int x, int n) {
     x = n*2;
@@ -30,4 +31,11 @@ void program_1() {
     end_time = clock();
     time_elapsed = (double) (end_time - start_time) / CLOCKS_PER_SEC;
     printf("Time: %lf seconds\n", time_elapsed);
+}
+
+void program_2() {
+    srand(0);
+    for(int i=0; i<5; i++){
+        printf("%d\n", rand());
+    }
 }
