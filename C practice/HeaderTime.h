@@ -39,3 +39,11 @@ void program_2() {
         printf("%d\n", rand());
     }
 }
+
+void program_3() {
+    time_t t;
+    srand((unsigned) time(&t));
+    for(int i=0; i<5; i++){
+        printf("%d\n", rand());
+    }
+}
