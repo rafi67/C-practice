@@ -15,3 +15,12 @@ void program_2() {
     int a = p, b = q;
     printf("a = %d, b = %d\n", a, b);
 }
+
+#define MAX(a, b) (a>b? a:b)
+
+void macro(){
+    int a = 83, b = 323;
+    double d1 = 8.32323, d2 = 3.33332323;
+    printf("maximum of %d and %d is %d\n", a, b, MAX(a, b));
+    printf("maximum of %d and %d is %d\n", d1, d2, MAX(d1, d2));
+}
