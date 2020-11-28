@@ -24,3 +24,16 @@ void macro(){
     printf("maximum of %d and %d is %d\n", a, b, MAX(a, b));
     printf("maximum of %d and %d is %d\n", d1, d2, MAX(d1, d2));
 }
+
+#define SWAP(a, b){\
+                a^=b;\
+                b^=a;\
+                a^=b;\
+}
+
+void macro_2() {
+    int a = 83, b = 323;
+    printf("a = %d, b = %d\n", a, b);
+    SWAP(a,b);
+    printf("a = %d, b = %d\n", a, b);
+}
