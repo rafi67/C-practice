@@ -1,5 +1,5 @@
 #include "headeretc.h"
 
 void main() {
-    Enum();
+    Enum_2();
 }

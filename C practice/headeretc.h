@@ -56,3 +56,12 @@ void Enum() {
     }
     printf("Selected color : %d\n", selected_color);
 }
+
+enum COLOR_2 {NO_COLOR, RED_1 , GREEN_1, BLUE_1};
+
+void Enum_2() {
+    printf("value : %d\n", NO_COLOR);
+    printf("value : %d\n", RED_1);
+    printf("value : %d\n", GREEN_1);
+    printf("value : %d\n", BLUE_1);
+}
