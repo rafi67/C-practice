@@ -37,3 +37,22 @@ void macro_2() {
     SWAP(a,b);
     printf("a = %d, b = %d\n", a, b);
 }
+
+enum COLOR {RED, GREEN, BLUE};
+
+void Enum() {
+    int num;
+    enum COLOR selected_color;
+    printf("Enter 1 for RED, 2 for GREEN, 3 for BLUE: ");
+    scanf("%d", &num);
+    if(num == 1){
+        selected_color = RED;
+    }
+    else if(num == 2){
+        selected_color = GREEN;
+    }
+    else{
+        selected_color = BLUE;
+    }
+    printf("Selected color : %d\n", selected_color);
+}
