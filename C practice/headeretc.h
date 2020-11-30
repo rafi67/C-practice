@@ -65,3 +65,12 @@ void Enum_2() {
     printf("value : %d\n", GREEN_1);
     printf("value : %d\n", BLUE_1);
 }
+
+enum COLOR_3 {NO_COLOR_1 = 0, RED_2 = 40, GREEN_2 = 44, BLUE_2 = 60};
+
+void Enum_3() {
+    printf("value : %d\n", NO_COLOR_1);
+    printf("value : %d\n", RED_2);
+    printf("value : %d\n", GREEN_2);
+    printf("value : %d\n", BLUE_2);
+}
