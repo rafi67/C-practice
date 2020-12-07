@@ -74,3 +74,33 @@ void Enum_3() {
     printf("value : %d\n", GREEN_2);
     printf("value : %d\n", BLUE_2);
 }
+
+enum DAY {SUNDAY, MONDAY, TUSEDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY};
+
+void Enum_4() {
+    enum DAY today;
+    today = THURSDAY;
+
+    switch (today) {
+    case SUNDAY:
+        printf("Today is Sunday. It is a work day\n");
+        break;
+    case MONDAY:
+        printf("Today is Monday. It is a work day\n");
+        break;
+    case TUSEDAY:
+        printf("Today is Tuseday. It is a work day\n");
+        break;
+    case THURSDAY:
+        printf("Today is Thursday. It is a work day\n");
+        break;
+    case FRIDAY:
+        printf("Today is Friday. It is a work day\n");
+        break;
+    case SATURDAY:
+        printf("Today is Saturday. It is a work day\n");
+        break;
+    default:
+        printf("Many items\n");
+    }
+}
