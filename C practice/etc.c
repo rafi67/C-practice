@@ -2,6 +2,10 @@
 #include <stdlib.h>
 
 void main(int argc, char *argv[]) {
-    printf("Argument count : %d\n", argc);
-    printf("First argument : %s\n", argv[0]);
+    if(argc !=2){
+        printf("Enter one argument(your name):\n");
+        return;
+    }
+    printf("Welcome %s\n", argv[1]);
+
 }
